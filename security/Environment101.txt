@@ -1,0 +1,85 @@
+1. Navigating the *NIX File System
+	cd, ls, file, find, cp, mv, ln
+	Resources:
+          + Solving the Challenges should prompt you to research
+	Challenges:
+          1. overthewire.org Bandit Levels 0 - Levels 12
+2. Managing processes
+	ps, &, fg, bg, start, stop, kill, Ctrl+C, Ctrl+D, Ctrl+Z
+	Resources:
+          + http://www.thegeekstuff.com/2013/07/linux-process-life-cycle/
+
+          By now you're familiar with man pages. Find and read manuals for:
+          ps, start, stop, kill.
+          Built-in shell commands have no man pages. We use the `help` cmd.
+          Read the help pages for fg, bg, kill
+	Challenges:
+          1. How would you run the command `gedit tool.c` in background?
+          2. What signals do the following send:
+             Ctrl+C:
+             Ctrl+D:
+             Ctrl+Z:
+          3. Why or when would you ever use the `ps` command?
+          4. What are the most common options used with the `ps` command?
+          5. I ran a program or command. I think it's stuck. Suggest two
+             ways I can end the program?
+          6. What are child and parent processes?
+          7. What process has ID 1
+          8. Briefly explain the output of the `ps aux`
+3. Bash scripting/tricks
+	chmod, extension or not
+	Write a script to:
+	1. print your name 10 times
+	2. accept two numbers as cmdline arg; perform the following
+	   1. print max
+	   2. print sum
+	3. Write above scripts without delimiting with spaces
+	4. Write above scripts using any bash tricks you learned
+	Resources:
+          + http://wiki.bash-hackers.org/
+	Challenges:
+          1. What is command injection (CI)?
+          2. Why is it bad idea to write code that calls system() on user
+             input
+          3. I can prevent CI by using any of the following:
+             1. Sanitize user input by removing spaces (T/F)
+             2. Sanitize user input by converting to upper case (T/F)
+          4. What is the shebang?
+          5. How do I make my script executable?
+          6. How do I find out if a script is executable?
+          7. How important is a file extension?
+          8. How do I know the format of a file without an extension?
+4. Python scripting
+	socket library, ascii to int conversions
+	write a script to:
+	1. accept cmdline argument of host; perform the following
+	   1. print connection details (Host IP, PORT; client IP and Port)
+           2. read from 1024 bytes from client
+	Resources:
+          + http://www.binarytides.com/python-socket-programming-tutorial/
+          + http://www.linuxhowtos.org/C_C++/socket.htm
+	Challenges:
+          1. Attempt to write the same script in C. Use this exercise to explore sockets
+5. Environment Variables
+	env, echo $, var=var;export var, bashrc, profile. /etc/environment
+	PATH, SHELL, LD_PRELOAD
+	local and global variables
+	Resources:
+	Challenges: Custom
+6. Networking
+	nc, telnet, ssh
+	nc as client, nc as server
+	ssh authentication explained
+	Resources:
+          + Solving the overthewire.org challenges should prompt you to research
+          + https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+          + https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process
+          + https://www.youtube.com/watch?v=svRWcx7dT8g
+	Challenges:
+          1. Overthewire.org bandit Level 13 - Level 18
+7. Privilege
+	setuid
+	Resources:
+	  + Solving the overthewire.org challenges should prompt you to research
+	Challenges:
+          1. Overthewire.org bandit level 19 - leve 26

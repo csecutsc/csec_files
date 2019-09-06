@@ -1,0 +1,131 @@
+<ol>
+<li><p>Navigating the *NIX File System:</p>
+
+<p><code>cd</code>, <code>ls</code>, <code>file</code>, <code>find</code>, <code>cp</code>, <code>mv</code>, <code>ln</code></p>
+
+<p><strong>Resources</strong>:</p>
+
+<p>Solving the Challenges should prompt you to research</p>
+
+<p><strong>Challenges</strong>:</p>
+
+<ol>
+<li>overthewire.org Bandit Levels 0 - Levels 12</li></ol></li>
+
+<li><p>Managing processes</p>
+
+<p><code>ps</code>, <code>&amp;</code>, <code>fg</code>, <code>bg</code>, <code>start</code>, <code>stop</code>, <code>kill</code>, <code>Ctrl+C</code>, <code>Ctrl+D</code>, <code>Ctrl+Z</code>, <code>;</code>, <code>|</code></p>
+
+<p><strong>Resources</strong>:</p>
+
+<p>http://www.thegeekstuff.com/2013/07/linux-process-life-cycle/</p>
+
+<p>By now you're familiar with man pages. Find and read manuals for: <code>ps</code>, <code>start</code>, <code>stop</code>, <code>kill</code>.
+Built-in shell commands have no man pages. We use <code>help</code>. Read the help pages for <code>fg</code>, <code>bg</code>, <code>kill</code></p>
+
+<p><strong>Challenges</strong>:</p>
+
+<ol>
+<li><p>How would you run the command <code>gedit tool.c</code> in background?</p>
+
+<p><strong>Answer:</strong> <code>gedit tools.c &amp;</code></p></li>
+
+<li><p>What signals do the following send:</p>
+
+<p>Ctrl+C: <code>SIGINT</code> Can be intercepted incase the program wishes to clean up nicely</p>
+
+<p>Ctrl+D: <code>EOF</code> Not really a signal</p>
+
+<p>Ctrl+Z: <code>SIGSTOP</code> Cannot be intercepted by program</p></li>
+
+<li><p>Why or when would you ever use the <code>ps</code> command?</p>
+
+<p><strong>Answer:</strong> Enumerate processes, investigate running processes.</p></li>
+
+<li><p>What are the most common options used with the <code>ps</code> command?</p>
+
+<p><strong>Answer:</strong> possibly <code>aux</code></p></li>
+
+<li><p>I ran a program or command. I think it's stuck. Suggest two ways I can end the program?</p>
+
+<p><strong>Answer:</strong> <code>Ctrl-C</code> or <code>kill &lt;pid&gt;</code></p></li>
+
+<li><p>What are child and parent processes?</p>
+
+<p><strong>Answer:</strong> A process that forks to create another process is called parent. The forked process is child.</p></li>
+
+<li><p>What process has ID 1</p>
+
+<p><strong>Answer:</strong> The init process owned by root.</p></li>
+
+<li><p>Briefly explain the output of the <code>ps aux</code></p>
+
+<p><strong>Answer:</strong> Lists all processes attached to terminal or not, in user oriented format. this is different from <code>ps -aux</code>. See the man page.</p></li></ol></li>
+
+<li><p>Bash scripting/tricks</p>
+
+<p><code>chmod</code>, file extensions or not</p>
+
+<p>Write a script to:</p>
+
+<ol>
+<li>print your name 10 times</li>
+
+<li>accept two numbers as cmdline arg; perform the following
+
+
+<ol>
+<li>print max</li>
+
+<li>print sum</li></ol>
+</li>
+
+<li>Write above scripts without delimiting with spaces</li>
+
+<li>Write above scripts using any bash tricks you learned</li></ol>
+
+<p><strong>Resources</strong>:
+http://wiki.bash-hackers.org/</p>
+
+<p><strong>Challenges</strong>:</p>
+
+<ol>
+<li><p>What is command injection (CI)?</p>
+
+<p><strong>Answer:</strong> A type fo vulnerability that allows user input to be executed with a shell. Possibly due to improper sanitization. See exploit-exercises.com Nebula level 07</p></li>
+
+<li><p>Why is it bad idea to write code that calls system() on user input</p>
+
+<p><strong>Answer:</strong> Improper user input sanitization may result in CI vulnerability.</p></li>
+
+<li><p>I can prevent CI by using any of the following:</p>
+
+<ol>
+<li><p>Sanitize user input by removing spaces (T/<strong>F</strong>)</p></li>
+
+<li><p>Sanitize user input by converting to upper case (T/<strong>F</strong>)</p>
+
+<p>See exploit-exercises.com Nebula level 16</p></li></ol></li>
+
+<li><p>What is the shebang?</p>
+
+<p><strong>Answer:</strong> <code>#!/path/to/executable</code> Specifies the executable with which the following instructions should be executed</p></li>
+
+<li><p>How do I make my script executable?</p>
+
+<p><strong>Answer:</strong> By adding the executable bit to the corresponding type of users; owner, group and others. For example,  <code>chmod ugo+x script.py</code> adds the executable bit for owner, group and others. <code>chmod u+x script.py</code> adds the bit for just owner.</p></li>
+
+<li><p>How do I find out if a script is executable?</p>
+
+<p><strong>Answer:</strong> use <code>ls -l &lt;script&gt;</code> to list permissions on the script. An <code>x</code> specifies for whom this script is executable.</p></li>
+
+<li><p>How important is a file extension?</p>
+
+<p><strong>Answer:</strong> Doesn't matter much in Linux env. However, it's up to programmers to uphold this. For example, you don't need <code>.sh</code> extension to run a shell script.</p></li>
+
+<li><p>How do I know the format of a file without an extension?</p>
+
+<p><strong>Answer:</strong> <code>file &lt;file&gt;</code>. Example <code>file steps.pdf</code> yields: steps.pdf: PDF document, version 1.5.</p>
+
+<p>Stripping the pdf extension doesn't change the output.</p></li></ol></li>
+</ol>

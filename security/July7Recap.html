@@ -1,0 +1,64 @@
+<h2 id="july-7th-recap">July 7th Recap</h2>
+<h3 id="introduced-computer-networking">Introduced Computer Networking</h3>
+<ul>
+<li>Briefly discussed the 7 Layer OSI Model and the different protocols relevant to each layer</li>
+<li>Briefly discussed the Network stack from an attacker's point of view</li>
+<li>Briefly discussed IP addresses; IPv4, IPv6</li>
+<li>Briefly discussed routing.</li>
+</ul>
+<p>Relevant readings: Hacking; The Art of Exploitation Chapter 4.</p>
+<p>Relevant search terms: OSI model, DNS, ARP, MAC addresses, TCP/IP, whois, traceroute</p>
+<h3 id="introduced-web-applications">Introduced Web Applications</h3>
+<ul>
+<li>Briefly discussed the Hyper Text Transfer Protocol
+<ul>
+<li>Methods: GET, POST, PUT e.t.c</li>
+<li>Status Codes: 200, 500, 404, 401 e.t.c</li>
+<li>Response Headers: Referer-Policy, Cookie, Content-Type e.t.c</li>
+<li>Request Headers: Referer, Cookie, User-Agent e.t.c</li>
+</ul></li>
+<li>Briefly discussed attack vectors
+<ul>
+<li>Client --------- Internet --------- Server
+<ul>
+<li>Placing the attacker between the Client and Internet</li>
+<li>Placing the attacker between the Internet and Server</li>
+<li>Impersonating the Server</li>
+<li>Malicious client</li>
+</ul></li>
+<li>Most times, start with the client
+<ul>
+<li>Learn how it communicates with the server</li>
+<li>Inspect client source for programmer errors</li>
+<li>Using the developer tools on the browser; right click or F12</li>
+<li>Inspect response headers</li>
+<li>Inspect requests</li>
+</ul></li>
+<li>Input validation bugs
+<ul>
+<li>XSS, SQLi / NoSQLi, CSRF, Command Injection, XML injection e.t.c</li>
+<li>Remote / local File inclusion</li>
+</ul></li>
+<li>Sending custom requests (bypassing the client app)
+<ul>
+<li>Discovering / Fuzzing APIs</li>
+<li>Testing the server for misconfigurations
+<ul>
+<li>Requesting config files such as <code>config.php</code>, <code>.htaccess</code> on php servers e.t.c</li>
+<li>Requesting <code>robots.txt</code> for user-agent disallowed paths</li>
+</ul></li>
+<li>Testing the server for vulnerable services e.g vulnerable php versions or 3rd party software</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Relevant readings: The Web Application hacker's handbook Chapters 1 and 3</p>
+<p>Relevant play space</p>
+<ul>
+<li><a href="https://xss-game.appspot.com/">XSS Game</a> by Google</li>
+<li>Attempt to register on <a href="https://www.hackthebox.eu/en/invite">hackthebox</a></li>
+</ul>
+<h3 id="solved-a-few-challenges">Solved a few challenges</h3>
+<ul>
+<li>OTW <a href="http://overthewire.org/wargames/natas/">Natas</a> Levels 0 - 4 (Try these yourself!)</li>
+<li>Registered on <a href="https://www.hackthebox.eu/en/invite">hackthebox</a></li>
+</ul>
